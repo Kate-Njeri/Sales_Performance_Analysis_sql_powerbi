@@ -111,7 +111,7 @@ _What steps are needed to clean and shape the data into the desired format?_
 * Renaming columns using aliases
 
 ### Transform the Data
-'''sql
+```sql
 /*
 Merge datasets from the six regions
 */
@@ -133,37 +133,37 @@ FROM global_sales_analysis.sales_2025_south_africa
 UNION ALL
 SELECT *
 FROM global_sales_analysis.sales_2025_united_states;
-'''
+```
 
 # Testing
 ## Data Quality Tests
 _Data quality and validation checks I conducted_
 
 ### 1. Row count validation
-'''sql
+```sql
 /*
 Count the total number of records (or rows)
 */
 SELECT COUNT(*) AS no_of_rows
 FROM global_sales_analysis.sales_analysis;
-'''
+```
 
 ![Row Count Check]()
 
 ### 2. Column completeness check
-'''sql
+```sql
 /*
 Count the total number of columns
 */
 SELECT COUNT(*) AS column_count
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'sales_analysis';
-'''
+```
 
 ![Column Count Check]()
 
 ### 3. Data type validation
-'''sql
+```sql
 /*
 Check the data type of each column
 */
@@ -172,12 +172,12 @@ SELECT
     DATA_TYPE
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'sales_analysis';
-'''
+```
 
 ![Data Type Check]()
 
 ### 4. Duplicate transaction ID check
-'''sql
+```sql
 /*
 Check for duplicate rows
 Group by Transaction ID
@@ -189,12 +189,12 @@ SELECT
 FROM sales_analysis
 GROUP BY Transaction_ID
 HAVING COUNT(*) > 1;
-'''
+```
 
 ![Data Type Check]()
 
 ### 5. Missing value checks for critical fields (price, quantity, cost)
-'''sql
+```sql
 /*
 Check for missing values
 */
@@ -205,7 +205,7 @@ WHERE Country IS NULL
     OR Quantity_Purchased IS NULL
     OR Cost_Price IS NULL
     OR Discount_Applied IS NULL;
-'''
+```
 
 ![Data Type Check]()
 
