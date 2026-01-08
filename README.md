@@ -1,4 +1,28 @@
 # Sales Performance Analysis
+
+# Table of Contents
+- [Objective](#objective)
+- [Data Source](#data-source)
+- [Project Stages](#project-stages)
+- [Design](#design)
+    - [Dashboard Mock-Up](#dashboard-mock-up)
+    - [Tools](#tools)
+- [Development](#development)
+    - [Pseudocode](#pseudocode)
+    - [Data Exploration notes](#data-exploration-notes)
+    - [Data Cleaning](#data-cleaning)
+- [Testing](#testing)
+- [Visualization](#visualization)
+    - [Results](#results)
+    - [DAX Measures](#dax-measures)
+- [Analysis](#analysis)
+    - [Findings](#findings)
+    - [Validation](#validation)
+    - [Discovery](#discovery)
+- [Recommendation](#recommendation)
+    - [Potential ROI](#potential-roi)
+    - [Potential Courses of Action](#potential-courses-of-action)
+
 # Objective
 The goal of this project is to design a sales analytics solution that helps answer key business questions:
 - How are sales performing overall?
@@ -37,6 +61,7 @@ The dashboard is structured into:
 - Sales representative performance
 
 _What should it look like?_
+![Dashboard Mock-Up]()
 
 ## Tools
 - Excel – data preparation, validation
@@ -56,8 +81,8 @@ _What's the general approach in creating this solution from start to finish?_
 8. Write the documentation & commentary
 9. Publish the data to GitHub Pages
 
-## b. Data Exploration
-This is the stage where I scan what’s in the data: errors, inconsistencies, bugs, weird and corrupted characters etc.
+## b. Data Exploration notes
+This is the stage where I scan the data for errors, inconsistencies, bugs, and other anomalies, such as weird and corrupted characters.
 
 _What are the initial observations with this dataset? What’s caught my attention so far?_
 * There are at least 3 columns that contain the data we will not need for this analysis, without needing to contact the client for any more data.
@@ -65,7 +90,7 @@ _What are the initial observations with this dataset? What’s caught my attenti
 * We have more data than we need, so some of these columns would need to be removed.
 
 ## c. Data Cleaning
-_What is the expected clean data to look like? (What should it contain? What constraints should we apply to it?)_
+_What is the expected clean data to look like? (What should it contain? What constraints should I apply to it?)_
 The aim is to refine our dataset to ensure it is structured and ready for analysis.
 
 The cleaned data should meet the following criteria and constraints:
@@ -75,18 +100,102 @@ The cleaned data should meet the following criteria and constraints:
 
 Below is a table outlining the constraints on our cleaned dataset:
 
-## d. Transform the Data
-## e. Create the SQL View
+
+Here is a tabular representation of the expected schema for the clean data:
+
+
+_What steps are needed to clean and shape the data into the desired format?_
+* Ensure there are no duplicates and deal with null values in the dataset
+* Renaming columns using aliases
+
+### Transform the Data
+'''sql
+
+'''
+
+### Create the SQL View
+'''sql
+
+'''
+
 # Testing
 ## Data Quality Tests
+_Data quality and validation checks I conducted_
+### 1. Row count validation
+'''sql
+
+'''
+
+### 2. Column completeness check
+'''sql
+
+'''
+
+### 3. Data type validation
+'''sql
+
+'''
+
+### 4. Duplicate transaction ID check
+'''sql
+
+'''
+
+### 5. Missing value checks for critical fields (price, quantity, cost)
+'''sql
+
+'''
+
 # Visualization
 ## a. Results
+![Dashboard Mock-Up]()
+
 ## b. DAX Measures
+### Total Sales
+
+### Total Profit
+
+### Total Discount
+
+### Sales per Region
+
+### Profit per Region
+
+### Average Order Value
+
 # Analysis
 ## a. Findings
+For this analysis, we are going to focus on the questions below to get the information we need for the sales team:
+1. How are we performing overall?
+2. Which regions are performing well and which need attention?
+3. Which products are driving value and which are not?
+4. Are discounts helping growth or hurting profitability?
+5. How is sales performance distributed across the team?
+
 ## b. Validation
+
 ## c. Discovery
+Additional patterns observed:
+* Regional differences in discount effectiveness
+* Product categories with consistent margin performance
+* Sales behavior patterns that influence profitability
+
 # Recommendations
+Based on the insights gathered, this is what I recommend:
+* Improved margin control through optimized discount thresholds to maintain sales momentum while preventing excessive discounting that erodes profitability.
+* Shifting attention toward products that deliver strong margins to allow the business to grow revenue more efficiently.
+* Understand which regions, products, and sales representatives generate healthy revenue-to-margin balance, enabling leadership to focus time and resources where they have the greatest impact.
+* Highlight areas where sales growth is driven by heavy discounting or low-margin products, and the business can intervene early.
+
 ## a. Potential ROI
+_What ROI do we expect if we take this course of action?_
+* Improved margin control through optimized discount thresholds
+* Better product focus on high-margin offerings
+* More efficient allocation of sales effort
+* Reduced revenue leakage from unprofitable growth
+
 ## b. Potential Courses of Action
-# Conclusion
+Based on the analysis, the most effective way to improve sales performance and profitability is to optimize discount strategies, prioritize high-margin products, and rebalance sales effort across regions and sales representatives.
+
+We will work with sales and leadership teams to align on performance expectations and margin targets. As improvements are observed and targets are met, these strategies can be scaled across additional regions and product categories.
+
