@@ -148,7 +148,7 @@ SELECT COUNT(*) AS no_of_rows
 FROM global_sales_analysis.sales_analysis;
 ```
 
-![Row Count Check](assets/images/Row Count.JPG)
+![Row Count Check](assets/images/row-count.jpg)
 
 ### 2. Column completeness check
 ```sql
@@ -160,7 +160,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'sales_analysis';
 ```
 
-![Column Count Check](assets/images/column count.JPG)
+![Column Count Check](assets/images/column-count.jpg)
 
 ### 3. Data type validation
 ```sql
@@ -174,7 +174,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'sales_analysis';
 ```
 
-![Data Type Check](assets/images/data type.JPG)
+![Data Type Check](assets/images/data-type.jpg)
 
 ### 4. Duplicate transaction ID check
 ```sql
@@ -191,7 +191,7 @@ GROUP BY Transaction_ID
 HAVING COUNT(*) > 1;
 ```
 
-![Data Type Check](assets/images/duplicate count check.JPG)
+![Data Type Check](assets/images/duplicate-count-check.jpg)
 
 ### 5. Missing value checks for critical fields (price, quantity, cost)
 ```sql
@@ -207,7 +207,7 @@ WHERE Country IS NULL
     OR Discount_Applied IS NULL;
 ```
 
-![Data Type Check](assets/images/missing value check.JPG)
+![Data Type Check](assets/images/missing-value-check.jpg)
 
 # Visualization
 ## a. Results
