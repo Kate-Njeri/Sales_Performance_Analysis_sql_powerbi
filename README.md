@@ -231,7 +231,7 @@ WHERE Country IS NULL
 
 # Visualization
 ## a. Results
-![Dashboard](sales-analysis.jpg)
+![Dashboard](assets/images/sales-analysis.jpg)
 
 The dashboard provides a concise, decision-focused view of:
 - overall sales performance
