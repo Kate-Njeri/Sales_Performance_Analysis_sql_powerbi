@@ -1,6 +1,6 @@
 # Sales Performance Analysis
 
-# Table of Contents
+## Table of Contents
 - [Objective](#objective)
 - [Data Source](#data-source)
 - [Project Stages](#project-stages)
